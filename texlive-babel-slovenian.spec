@@ -6,7 +6,7 @@
 # catalog-version 1.2i
 Name:		texlive-babel-slovenian
 Version:	1.2i
-Release:	7
+Release:	8
 Summary:	Babel support for typesetting Slovenian
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/babel-contrib/slovene
