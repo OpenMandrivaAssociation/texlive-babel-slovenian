@@ -1,6 +1,6 @@
 Name:		texlive-babel-slovenian
 Version:	57666
-Release:	1
+Release:	2
 Summary:	Babel support for typesetting Slovenian
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/babel-contrib/slovene
