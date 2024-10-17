@@ -3,7 +3,7 @@ Version:	69742
 Release:	1
 Summary:	Babel support for typesetting Slovenian
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/babel-contrib/slovene
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/babel-contrib/slovene
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-slovenian.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-slovenian.doc.r%{version}.tar.xz
