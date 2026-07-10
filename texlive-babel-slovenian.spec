@@ -1,45 +1,25 @@
-Name:		texlive-babel-slovenian
-Version:	69742
-Release:	1
+%global tl_name babel-slovenian
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.2p
+Release:	%{tl_revision}.1
 Summary:	Babel support for typesetting Slovenian
 Group:		Publishing
-URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/babel-contrib/slovene
-License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-slovenian.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-slovenian.doc.r%{version}.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-slovenian.source.r%{version}.tar.xz
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/babel-contrib/slovenian
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-slovenian.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-slovenian.doc.r%{tl_revision}.tar.xz
+Source2:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/babel-slovenian.source.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The package provides the language definition file for support
-of Slovenian in babel. Several shortcuts are defined, as well
-as translations to Slovenian of standard "LaTeX names".
+The package provides the language definition file for support of
+Slovenian in babel. Several shortcuts are defined, as well as
+translations to Slovenian of standard "LaTeX names".
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/generic/babel-slovenian
-%doc %{_texmfdistdir}/doc/generic/babel-slovenian
-#- source
-%doc %{_texmfdistdir}/source/generic/babel-slovenian
-
-#-----------------------------------------------------------------------
-%prep
-%setup -c -a1 -a2
-%autopatch -p1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
